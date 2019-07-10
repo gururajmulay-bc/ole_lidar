@@ -224,7 +224,7 @@ class OleLidarNode(object):
                 ole_intensities = [x for x in reversed(data['intensities'])]
                 
                 # clip ranges from self.clip_angle_min to self.clip_angle_max
-                clip_index = ( len(data['ranges']) - int(clip_length) ) / 2
+                clip_index = int(round(( len(data['ranges']) - int(clip_length) ) / 2))
                 msg.ranges = ole_ranges[clip_index:-clip_index-1]
                 msg.intensities = ole_intensities[clip_index:-clip_index-1]
 

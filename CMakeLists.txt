@@ -12,9 +12,9 @@ generate_messages(
   sensor_msgs
 )
 
-generate_dynamic_reconfigure_options(
-    cfg/Lidar.cfg
-)
+#generate_dynamic_reconfigure_options(
+#    cfg/Lidar.cfg
+#)
 
 catkin_package(
   CATKIN_DEPENDS dynamic_reconfigure message_runtime roscpp rospy rosgraph_msgs sensor_msgs

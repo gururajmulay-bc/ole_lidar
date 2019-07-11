@@ -152,8 +152,8 @@ class OleLidarNode(object):
         self.frame_id = rospy.get_param('~frame_id')
         self.merge = rospy.get_param('~merge')
 
-        self.clip_angle_min = rospy.get_param('~clip_angle_min')
-        self.clip_angle_max = rospy.get_param('~clip_angle_max')
+        self.clip_angle_min = -100  #rospy.get_param('~clip_angle_min')
+        self.clip_angle_max = 100  #rospy.get_param('~clip_angle_max')
 
         self.seq = 0
 

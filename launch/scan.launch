@@ -1,10 +1,14 @@
-<launch>
-  <node pkg="ole_lidar" type="scan" name="ole_lidar">
-    <param name="ip" value="192.168.3.1"/>
-    <param name="port" value="2368"/>
-    <param name="freq" value="15"/>
-    <param name="distance" value="0"/>
-    <param name="frame_id" value="ole_lidar"/>
-    <param name="merge" value="true"/>
-  </node>
-</launch>
+ <launch>
+   <node pkg="ole_lidar" type="scan" name="ole_lidar">
+     <param name="ip" value="192.168.3.1"/>
+     <param name="port" value="2368"/>
+     <param name="freq" value="15"/>
+     <param name="distance" value="0"/>
+     <param name="frame_id" value="ole_lidar"/>
+     <param name="merge" value="true"/>
+ 
+     <!-- clipping angles for brain-shining-little -->
+     <param name="clip_angle_min" value="-100"/>
+     <param name="clip_angle_max" value="100"/>
+   </node>
+ </launch>
